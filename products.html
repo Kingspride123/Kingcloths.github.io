@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MyShop</title>
+    <link rel="stylesheet" href="styles.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="script.JS" defer></script>
+</head>
+<body>
+    <header>
+            <nav>
+                <div class="logo">MyShop</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="cart-icon" id="cartIcon">🛒 <span id="cartCount">0</span></div>
+            </nav>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main>
+        <section id="products">
+            <h1 class="section-title">Our Products</h1>
+            <div class="product-filters">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="home">Home & Garden</option>
+                        <option value="toys">Toys & Games</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceFilter">Price Range:</label>
+                    <select id="priceFilter">
+                        <option value="">All Prices</option>
+                        <option value="0-25">$0 - $25</option>
+                        <option value="25-50">$25 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100+">$100+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortFilter">Sort By:</label>
+                    <select id="sortFilter">
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be dynamically added here -->
+            </div>
+            <div class="pagination">
+                <button id="prevPage" disabled>Previous</button>
+                <span id="currentPage">Page 1</span>
+                <button id="nextPage">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>  
+            <p>&copy; 2024 MyShop. All rights reserved.</p>
+    
+        <div id="cart" class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: $<span id="cartTotal">0</span></p>
+            <button id="checkoutBtn">Checkout</button>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <div id="cart" class="cart">
+        <!-- Same cart as index.html -->
+    </div>
+
+    <div id="loginModal" class="modal">
+        <!-- Same login modal as index.html -->
+    </div>
+
+    <div id="registerModal" class="modal">
+        <!-- Same register modal as index.html -->
+    </div>
+</body>
+</html>

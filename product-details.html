@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - MyShop</title>
+    <link rel="stylesheet" href="styles.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="script.JS" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main>
+        <section id="product-details">
+            <div class="product-image-gallery">
+                <div class="main-image">
+                    <img src="elect.jpg" alt="product image" id="productImage">
+                </div>
+                <div class="thumbnail-images" id="thumbnailImages">
+                    <!-- Thumbnail images will be dynamically added here -->
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 id="productName"></h1>
+                <div class="product-rating">
+                    <span class="stars" id="productRating"></span>
+                    <span id="reviewCount"></span>
+                </div>
+                <p class="product-price" id="productPrice"></p>
+                <p id="productDescription"></p>
+                <div class="product-options">
+                    <div class="option-group">
+                        <label for="productSize">Size:</label>
+                        <select id="productSize">
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                            <option value="xl">X-Large</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="productColor">Color:</label>
+                        <select id="productColor">
+                            <!-- Color options will be dynamically added here -->
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="productQuantity">Quantity:</label>
+                        <input type="number" id="productQuantity" value="1" min="1">
+                    </div>
+                </div>
+                <button id="addToCartBtn" class="cta-button">Add to Cart</button>
+                <button id="addToWishlistBtn"><i class="fas fa-heart"></i> Add to Wishlist</button>
+            </div>
+        </section>
+
+        <section id="product-tabs">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            <div class="tab-content">
+                <div id="description" class="tab-pane active">
+                    <p id="fullDescription"></p>
+                </div>
+                <div id="specifications" class="tab-pane">
+                    <table id="specificationTable">
+                        <!-- Specifications will be dynamically added here -->
+                    </table>
+                </div>
+                <div id="reviews" class="tab-pane">
+                    <div id="reviewsList">
+                        <!-- Reviews will be dynamically added here -->
+                    </div>
+                    <form id="reviewForm">
+                        <h3>Write a Review</h3>
+                        <div class="form-group">
+                            <label for="rating">Rating:</label>
+                            <div class="star-rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+                                <imput type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+                            </div>
+                        </div>
+                    </form>     
+                </div>
+            </div>
+        </section>
+    </main>
+</body>   
+</html>    

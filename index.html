@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop - Your One-Stop E-commerce Store</title>
+    <link rel="stylesheet" href="styles.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="script.JS" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyShop</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="user-actions">
+                <button id="accountBtn"><i class="fas fa-user"></i> My Account</button>
+                <button id="wishlistBtn"><i class="fas fa-heart"></i> Wishlist</button>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to MyShop</h1>
+            <p>Discover amazing products at unbeatable prices!</p>
+            <a href="products.html" class="cta-button">Shop Now</a>
+        </section>
+
+        <section id="featured-products">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid" id="featuredProductGrid">
+                <!-- Featured products will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="categories">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="elect.jpg" alt="Electronics">
+                    <h3>Electronics</h3>
+                    <a href="products.html" class="category-link">Shop Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="clothings.jpg" alt="Clothing">
+                    <h3>Clothing</h3>
+                    <a href="products.html?category=clothing" class="category-link">Shop Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="home.jpg"Home & Garden">
+                    <h3>Home & Garden</h3>
+                    <a href="products.html" class="category-link">Shop Now</a>
+                </div>
+                <div class="category-item">
+                    <img src="toys.jpg" alt="Toys & Games">
+                    <h3>Toys & Games</h3>
+                    <a href="products.html" class="category-link">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="special-offers">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offer-container">
+                <div class="offer-item">
+                    <h3>Summer Sale</h3>
+                    <p>Up to 50% off on selected items</p>
+                    <a href="products.html" class="offer-link">Shop the Sale</a>
+                </div>
+                <div class="offer-item">
+                    <h3>New Arrivals</h3>
+                    <p>Check out our latest products</p>
+                    <a href="products.html" class="offer-link">See What's New</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial">
+                    <p>"Great products and excellent service! Will definitely shop here again."</p>
+                    <cite>- John D.</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"I love shopping at MyShop. Always find what I need at great prices."</p>
+                    <cite>- Sarah M.</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Fast shipping and top-quality items. Highly recommended!"</p>
+                    <cite>- Michael R.</cite>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest offers and new products!</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MyShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cart" class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+        <button id="checkoutBtn">Checkout</button>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
